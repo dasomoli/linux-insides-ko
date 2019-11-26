@@ -142,7 +142,6 @@ nasm -f bin boot.nasm && qemu-system-x86_64 boot
 이를 통해 QEMU에게 디스크 이미지로 방금 우리가 만든 부팅 바이너리를 사용하도록 지시할 수 있습니다. 어셈블리 코드에 의해 생성된 바이너리는 부트 섹터의 요구사항(위치 카운터가 `0x7c00` 설정 되었으며, 매직 시퀀스로 끝남)을 충족하기 때문에, QEMU는 이 바이너리를 디스크 이미지의 마스터 부트 레코드 (MBR)로 다룹니다.
 
 당신은 아래와 같이 보게 될것입니다:
-You will see:
 
 ![Simple bootloader which prints only `!`](images/simple_bootloader.png)
 
